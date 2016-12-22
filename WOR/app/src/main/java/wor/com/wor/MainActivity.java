@@ -14,10 +14,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-//import wor.com.wor.PageFragments.HomePageFragment;
-//import wor.com.wor.PageFragments.testPage1Fragment;
-//import wor.com.wor.PageFragments.testPage2Fragment;
-//import wor.com.wor.PageFragments.testPage3Fragment;
+import wor.com.wor.PageFragments.HomePageFragment;
+import wor.com.wor.PageFragments.testPage1Fragment;
+import wor.com.wor.PageFragments.testPage2Fragment;
+import wor.com.wor.PageFragments.testPage3Fragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        //fragmentTransaction.add(R.id.main_container, new HomePageFragment());
+        fragmentTransaction.add(R.id.main_container, new HomePageFragment());
         fragmentTransaction.commit();
     }
 
@@ -91,22 +91,22 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            //fragmentTransaction.replace(R.id.main_container, new HomePageFragment());
+            fragmentTransaction.replace(R.id.main_container, new HomePageFragment());
             fragmentTransaction.commit();
             // Handle the camera action
         } else if (id == R.id.testPage1) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            //fragmentTransaction.replace(R.id.main_container, new testPage1Fragment());
+            fragmentTransaction.replace(R.id.main_container, new testPage1Fragment());
             fragmentTransaction.commit();
 
         } else if (id == R.id.testPage2) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            //fragmentTransaction.replace(R.id.main_container, new testPage2Fragment());
+            fragmentTransaction.replace(R.id.main_container, new testPage2Fragment());
             fragmentTransaction.commit();
 
         } else if (id == R.id.testPage3) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            //fragmentTransaction.replace(R.id.main_container, new testPage3Fragment());
+            fragmentTransaction.replace(R.id.main_container, new testPage3Fragment());
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_share) {
