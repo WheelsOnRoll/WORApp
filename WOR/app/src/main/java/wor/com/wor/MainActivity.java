@@ -3,7 +3,6 @@ package wor.com.wor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,14 +13,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import wor.com.wor.PageFragments.HomePageFragment;
-import wor.com.wor.PageFragments.testPage1Fragment;
-import wor.com.wor.PageFragments.testPage2Fragment;
-import wor.com.wor.PageFragments.testPage3Fragment;
+<<<<<<< HEAD
+<<<<<<< HEAD
+//import wor.com.wor.PageFragments.HomePageFragment;
+//import wor.com.wor.PageFragments.testPage1Fragment;
+//import wor.com.wor.PageFragments.testPage2Fragment;
+//import wor.com.wor.PageFragments.testPage3Fragment;
 
+=======
+>>>>>>> parent of 34499ab... This commit adds the default pages and the tabs
+=======
+>>>>>>> parent of 34499ab... This commit adds the default pages and the tabs
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    FragmentTransaction fragmentTransaction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +51,15 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+<<<<<<< HEAD
+<<<<<<< HEAD
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.main_container, new HomePageFragment());
+        //fragmentTransaction.add(R.id.main_container, new HomePageFragment());
         fragmentTransaction.commit();
+=======
+>>>>>>> parent of 34499ab... This commit adds the default pages and the tabs
+=======
+>>>>>>> parent of 34499ab... This commit adds the default pages and the tabs
     }
 
     @Override
@@ -89,25 +100,43 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
         if (id == R.id.nav_home) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.main_container, new HomePageFragment());
+            //fragmentTransaction.replace(R.id.main_container, new HomePageFragment());
             fragmentTransaction.commit();
             // Handle the camera action
         } else if (id == R.id.testPage1) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.main_container, new testPage1Fragment());
+            //fragmentTransaction.replace(R.id.main_container, new testPage1Fragment());
             fragmentTransaction.commit();
 
         } else if (id == R.id.testPage2) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.main_container, new testPage2Fragment());
+            //fragmentTransaction.replace(R.id.main_container, new testPage2Fragment());
             fragmentTransaction.commit();
 
         } else if (id == R.id.testPage3) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.main_container, new testPage3Fragment());
+            //fragmentTransaction.replace(R.id.main_container, new testPage3Fragment());
             fragmentTransaction.commit();
+=======
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+=======
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+>>>>>>> parent of 34499ab... This commit adds the default pages and the tabs
+        } else if (id == R.id.nav_gallery) {
+
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_manage) {
+<<<<<<< HEAD
+>>>>>>> parent of 34499ab... This commit adds the default pages and the tabs
+=======
+>>>>>>> parent of 34499ab... This commit adds the default pages and the tabs
 
         } else if (id == R.id.nav_share) {
 
