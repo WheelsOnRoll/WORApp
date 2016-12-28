@@ -16,8 +16,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -92,6 +95,16 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View header=navigationView.getHeaderView(0);
+        TextView name = (TextView)header.findViewById(R.id.navViewUsername);
+        TextView email = (TextView)header.findViewById(R.id.navViewEmail);
+        ImageView image = (ImageView)header.findViewById(R.id.navViewimageView);
+        name.setText(mFirebaseUser.getDisplayName());
+        email.setText(mFirebaseUser.getEmail());
+        Glide.with(MainActivity.this)
+                .load(mFirebaseUser.getPhotoUrl())
+                .into(image);
         navigationView.setNavigationItemSelectedListener(this);
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.main_container, new HomePageFragment());
