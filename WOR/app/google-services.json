@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "786995450047-jt42s768j0i7u99bj3ate6klasj6iic4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "wor.com.wor",
+            "certificate_hash": "FD5E00C53CD1919F6C9423F1BEBA5AD7E1EF0E63"
+          }
+        },
+        {
           "client_id": "786995450047-5lhr0343777rdg994iq3id8vomq2kf11.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
