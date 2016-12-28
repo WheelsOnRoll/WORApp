@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="wor.com.wor.PageFragments.ProfileUpdatePageFragment"
+    tools:showIn="@layout/fragment_profile_update_page">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:theme="@style/AppTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:textColor="#444" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Ex: Pratyush Giri"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/profile_edit_username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_edit_icon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll No."
+            android:textColor="#444" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/profile_roll_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Ex: 15IT241"
+                android:inputType="textPersonName"
+
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/profile_edit_rollno"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_edit_icon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Block No :"
+            android:textColor="#444" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/profile_blockno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Ex: Block 3"
+                android:inputType="textPostalAddress"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/profile_edit_blockno"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_edit_icon" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone No."
+            android:textColor="#444" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/profile_phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="Ex: +91 8861897654"
+                android:inputType="text|number"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/profile_edit_phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_edit_icon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="#444" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="abc@gmail.com"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/profile_edit_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_edit_icon" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/profile_pin_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Password"
+            android:inputType="numberPassword"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/profile_regNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reg Number (Eg: 15CO121)"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/profile_img_regNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_launcher"
+            android:text="College ID Proof"
+            android:textColor="@color/accent"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/profile_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textColor="@color/accent"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
