@@ -1,11 +1,17 @@
 package wor.com.wor;
 
+import android.*;
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -38,6 +44,8 @@ import wor.com.wor.PageFragments.LogoutPageFragment;
 import wor.com.wor.PageFragments.ProfileUpdatePageFragment;
 import wor.com.wor.PageFragments.ReferralPageFragment;
 
+import static android.Manifest.permission_group.CAMERA;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         View.OnClickListener,GoogleApiClient.OnConnectionFailedListener{
@@ -54,6 +62,7 @@ public class MainActivity extends AppCompatActivity
 
     private DatabaseReference mDatabase;
     FragmentTransaction fragmentTransaction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,15 +91,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        rideNow = (Button)findViewById(R.id.rideNow);
-        rideNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        
 
-                Intent rIntent = new Intent(MainActivity.this,rideNow.class);
-                startActivity(rIntent);
-            }
-        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
