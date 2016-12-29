@@ -212,6 +212,12 @@ public class MainActivity extends AppCompatActivity
 
         }
     }
+    public void logout(){
+        mFirebaseAuth.signOut();
+        Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+        mUsername = "anonymous";
+        startActivity(new Intent(this, SignInActivity.class));
+    }
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         // An unresolvable error has occurred and Google APIs (including Sign-In) will not
