@@ -18,6 +18,10 @@
     <string name="q5">Sample Question 5</string>
     <string name="q6">Sample Question 6</string>
 
+    <string name="report_rental">CYCLE RENTAL COMPLAINT</string>
+    <string name="report_owner">CYCLE OWNER COMPLAINT</string>
+    <string name="feedbackMail">contact.wheelsonroll@gmail.com</string>
+
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
