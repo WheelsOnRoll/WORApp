@@ -24,7 +24,9 @@ import wor.com.wor.rideNow;
  * Created by Santosh on 12/8/2016.
  */
 
-public class HomePageFragment extends PageMainFragment {  public HomePageFragment(){}
+public class HomePageFragment extends PageMainFragment {
+
+    public HomePageFragment(){}
 
     Button rideNow;
     @Override
