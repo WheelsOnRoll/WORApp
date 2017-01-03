@@ -20,15 +20,15 @@
             android:title="Cycle Report" />
         <item
             android:id="@+id/nav_referral"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_referral"
             android:title="Referral/ Promos" />
         <item
             android:id="@+id/nav_cycle_Logout"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_logout"
             android:title="Logout" />
         <item
             android:id="@+id/nav_faq"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_faq"
             android:title="FAQ" />
     </group>
 
