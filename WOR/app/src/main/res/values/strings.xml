@@ -22,6 +22,11 @@
     <string name="report_owner">CYCLE OWNER COMPLAINT</string>
     <string name="feedbackMail">contact.wheelsonroll@gmail.com</string>
 
+    <string name="block_name">Block Number (Ex: MT 1)</string>
+    <string name="mobile_number">Mobile Number (Ex: +91886251423)</string>
+    <string name="roll_no">Roll Number (Ex: 15IT240)</string>
+    <string name="referral_code">Referral Code (Ex: 102934)</string>
+
     <string name="sampleMail">abc@gmail.com</string>
 
     <string name="action_settings">Settings</string>
