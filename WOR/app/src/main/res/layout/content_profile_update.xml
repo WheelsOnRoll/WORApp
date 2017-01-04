@@ -8,7 +8,6 @@
     tools:context="wor.com.wor.PageFragments.ProfileUpdatePageFragment"
     tools:showIn="@layout/fragment_profile_update_page">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,12 +38,6 @@
                 android:text=""
                 android:textColor="@color/black" />
 
-            <ImageView
-                android:id="@+id/profile_edit_username"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_edit_icon" />
-
         </LinearLayout>
 
         <TextView
@@ -69,11 +62,29 @@
 
                 android:textColor="@color/black" />
 
-            <ImageView
-                android:id="@+id/profile_edit_rollno"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_edit_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="#444" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="abc@gmail.com"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -107,7 +118,6 @@
 
         </LinearLayout>
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,68 +147,6 @@
                 android:src="@drawable/ic_edit_icon" />
 
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email:"
-            android:textColor="#444" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/profile_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:enabled="false"
-                android:hint="abc@gmail.com"
-                android:inputType="textEmailAddress"
-                android:text=""
-                android:textColor="@color/black" />
-
-            <ImageView
-                android:id="@+id/profile_edit_pin"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_edit_icon" />
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/profile_pin_new"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="New Password"
-            android:inputType="numberPassword"
-            android:visibility="gone" />
-
-        <EditText
-            android:id="@+id/profile_regNo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Reg Number (Eg: 15CO121)"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/profile_img_regNo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableRight="@mipmap/ic_launcher"
-            android:text="College ID Proof"
-            android:textColor="@color/accent"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/profile_submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Update"
-            android:textColor="@color/accent"
-            android:visibility="gone" />
 
     </LinearLayout>
 
