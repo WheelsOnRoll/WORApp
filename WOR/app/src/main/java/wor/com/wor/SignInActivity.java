@@ -34,11 +34,6 @@ import java.util.Map;
 
 import wor.com.wor.models.User;
 
-/**
- * Created by Santosh on 28-Dec-16.
- */
-
-
 public class SignInActivity extends BaseActivity implements
         GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
@@ -75,9 +70,7 @@ public class SignInActivity extends BaseActivity implements
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
-
     }
-
 
     @Override
     public void onClick(View v) {
@@ -156,7 +149,7 @@ public class SignInActivity extends BaseActivity implements
                                         // TODO: go directly to Main Page
                                     }else{
                                         // TODO: go to Add details activity
-                                        Intent intent = new Intent(/* TODO: Add Intent class */);
+                                        Intent intent = new Intent(SignInActivity.this, AddDetailsActivity.class);
                                         intent.putExtra("email", email);
                                         intent.putExtra("photoUrl", photoUrl);
                                         intent.putExtra("id", id);
