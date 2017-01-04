@@ -27,4 +27,6 @@
     <string name="action_settings">Settings</string>
 
     <string name="referral">WOR Referral 6-Digit Number</string>
+
+    <string name="referral_message">This is referral message</string>
 </resources>
