@@ -13,7 +13,9 @@
         android:drawableRight="@drawable/ic_complaint"
         android:drawableTint="@color/accent"
         android:text="@string/report_owner"
-        android:textColor="@color/accent" />
+        android:textColor="@color/accent"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"/>
 
     <Button
         android:id="@+id/rental_complaint"
@@ -24,7 +26,8 @@
         android:drawableRight="@drawable/ic_complaint"
         android:drawableTint="@color/accent"
         android:text="@string/report_rental"
-        android:textColor="@color/accent" />
-
+        android:textColor="@color/accent"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"/>
 
 </LinearLayout>

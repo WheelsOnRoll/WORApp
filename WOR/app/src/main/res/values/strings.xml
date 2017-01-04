@@ -22,8 +22,9 @@
     <string name="report_owner">CYCLE OWNER COMPLAINT</string>
     <string name="feedbackMail">contact.wheelsonroll@gmail.com</string>
 
+    <string name="sampleMail">abc@gmail.com</string>
+
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="referral">WOR Referral 6-Digit Number</string>
 </resources>

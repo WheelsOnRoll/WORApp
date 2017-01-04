@@ -8,10 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-/**
- * Created by Santosh on 28-Dec-16.
- */
-
 public class User implements Serializable {
 
     private String id;
@@ -143,5 +139,3 @@ public class User implements Serializable {
         this.balance = balance;
     }
 }
-// [END blog_user_class]
-
