@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import wor.com.wor.R;
+import wor.com.wor.models.User;
 
 /**
  * Created by Santosh on 28-Dec-16.
@@ -21,4 +22,5 @@ public class ProfileUpdatePageFragment extends PageMainFragment {  public Profil
 
         return view;
     }
+
 }
