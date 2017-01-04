@@ -122,13 +122,13 @@ public class SignInActivity extends BaseActivity implements
         Log.d(TAG, "firebaseAuthWithGooogle:" + acct.getId());
         showProgressDialog();
 
-        final String Email = acct.getEmail();
-        final String PhotoUrl;
-        final String DN = acct.getDisplayName();
+        final String email = acct.getEmail();
+        final String photoUrl;
+        final String name = acct.getDisplayName();
         if (acct.getPhotoUrl() == null)
-            PhotoUrl = null;
+            photoUrl = null;
         else
-            PhotoUrl = acct.getPhotoUrl().toString();
+            photoUrl = acct.getPhotoUrl().toString();
 
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
@@ -147,23 +147,28 @@ public class SignInActivity extends BaseActivity implements
                                     Toast.LENGTH_SHORT).show();
                         } else {
 
-                            final String ID = mFirebaseAuth.getCurrentUser().getUid();
-                            final String upname = DN.toUpperCase();
-                         mDatabase.child("user-data").child(ID).child("uid").addListenerForSingleValueEvent(new ValueEventListener() {
+                            final String id = mFirebaseAuth.getCurrentUser().getUid();
+
+                            mDatabase.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                    boolean idfortest = dataSnapshot.exists();
-                                    if(!(idfortest)){
-                                        Toast.makeText(SignInActivity.this, "testing1", Toast.LENGTH_LONG).show();
-                                        writeNewUser(ID, DN, Email, PhotoUrl, upname);}
+                                    if(dataSnapshot.hasChild(id)){
+                                        // TODO: go directly to Main Page
+                                    }else{
+                                        // TODO: go to Add details activity
+                                        Intent intent = new Intent(/* TODO: Add Intent class */);
+                                        intent.putExtra("email", email);
+                                        intent.putExtra("photoUrl", photoUrl);
+                                        intent.putExtra("id", id);
+                                        startActivity(intent);
+                                        finish();
+                                    }
                                 }
-
                                 @Override
                                 public void onCancelled(DatabaseError databaseError) {
 
                                 }
                             });
-
 
                             hideProgressDialog();
                             startActivity(new Intent(SignInActivity.this, MainActivity.class));
@@ -173,19 +178,19 @@ public class SignInActivity extends BaseActivity implements
                 });
     }
 
-    // [START basic_write]
-    private void writeNewUser(String userId, String name, String email, String PhotoUrl, String upname) {
-        User user = new User(name, email, PhotoUrl, upname, userId);
-
-
-        Map<String, Object> postValues = user.toMap();
-
-        Map<String, Object> childUpdates = new HashMap<>();
-        childUpdates.put("/users/" + userId, postValues);
-        childUpdates.put("/user-data/" + userId, postValues);
-
-        mDatabase.updateChildren(childUpdates);
-        Toast.makeText(this, "Successfully Signed In", Toast.LENGTH_SHORT).show();
-
-    }
+//    // [START basic_write]
+//    private void writeNewUser(String userId, String name, String email, String PhotoUrl, String upname) {
+//        User user = new User(name, email, PhotoUrl, upname, userId);
+//
+//
+//        Map<String, Object> postValues = user.toMap();
+//
+//        Map<String, Object> childUpdates = new HashMap<>();
+//        childUpdates.put("/users/" + userId, postValues);
+//        childUpdates.put("/user-data/" + userId, postValues);
+//
+//        mDatabase.updateChildren(childUpdates);
+//        Toast.makeText(this, "Successfully Signed In", Toast.LENGTH_SHORT).show();
+//
+//    }
 }
