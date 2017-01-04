@@ -6,10 +6,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Santosh on 28-Dec-16.
- */
-
 public class User implements Serializable {
 
     private String username;
@@ -80,5 +76,3 @@ public class User implements Serializable {
     }
 
 }
-// [END blog_user_class]
-
