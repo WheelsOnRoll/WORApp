@@ -70,7 +70,7 @@ public class User implements Serializable {
                 String.valueOf(balance);
     }
 
-    public User parse(String userString) {
+    public static User parse(String userString) {
         String[] entities = userString.split("\n");
         return new User(entities[0], entities[1], entities[2], entities[3], entities[4], entities[5], entities[6], Integer.parseInt(entities[7]));
     }
