@@ -11,10 +11,9 @@ import java.util.HashMap;
 
 public class Referral implements Serializable {
 
-    private String id, code, to;
+    private String code, to;
 
-    public Referral(String id, String code, String to) {
-        this.id = id;
+    public Referral(String code, String to) {
         this.code = code;
         this.to = to;
     }
@@ -22,18 +21,9 @@ public class Referral implements Serializable {
     @Exclude
     public HashMap<String, Object> toMap(){
         HashMap<String, Object> result =  new HashMap<>();
-        result.put("id", id);
         result.put("code", code);
         result.put("to", to);
         return result;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getCode() {

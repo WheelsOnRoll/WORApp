@@ -69,11 +69,7 @@ public class ReferralPageFragment extends PageMainFragment {
         long time = System.currentTimeMillis();
         String referralCode = String.valueOf(time).substring(1);
         String referralCodeReadable = referralCode.substring(0,4)+" "+referralCode.substring(4,8)+" "+referralCode.substring(8,12);
-        String id = mDatabase.child("referrals").push().getKey();
-        Map<String, Object> referralMap = new Referral(id, referralCode, mail).toMap();
-        Map<String, Object> childUpdates = new HashMap<>();
-        childUpdates.put("/referrals/" + id, referralMap);
-        mDatabase.updateChildren(childUpdates);
+        mDatabase.child("referrals").child(referralCode).setValue(new Referral(referralCode, mail));
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("text/plain");
