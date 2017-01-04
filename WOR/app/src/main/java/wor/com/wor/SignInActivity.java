@@ -151,6 +151,7 @@ public class SignInActivity extends BaseActivity implements
                                         // TODO: go to Add details activity
                                         Intent intent = new Intent(SignInActivity.this, AddDetailsActivity.class);
                                         intent.putExtra("email", email);
+                                        intent.putExtra("userName", name);
                                         intent.putExtra("photoUrl", photoUrl);
                                         intent.putExtra("id", id);
                                         startActivity(intent);
