@@ -17,6 +17,9 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
+import wor.com.wor.ContentFragments.MTPitStopFragment;
+import wor.com.wor.ContentFragments.MechPitStopFragment;
+import wor.com.wor.ContentFragments.WesternPitStopFragment;
 import wor.com.wor.R;
 import wor.com.wor.rideNow;
 
@@ -26,22 +29,57 @@ import wor.com.wor.rideNow;
 
 public class HomePageFragment extends PageMainFragment {
 
-    public HomePageFragment(){}
-
-    Button rideNow;
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (ActivityCompat.checkSelfPermission(getContext(), permissions[0]) == PackageManager.PERMISSION_GRANTED) {
-            rideNow.setClickable(true);
-        }
+    public HomePageFragment() {
     }
 
+    /*
+        Button rideNow;
+        @Override
+        public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+            if (ActivityCompat.checkSelfPermission(getContext(), permissions[0]) == PackageManager.PERMISSION_GRANTED) {
+                rideNow.setClickable(true);
+            }
+        }
+    */
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable
             Bundle savedInstanceState) {
         // Inflate thdee layout for this fragment
-        View rootView =  inflater.inflate(R.layout.fragment_home_page, container, false);
+        final View view= inflater.inflate(R.layout.fragment_home_page, container, false);
+
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("MegaTower"));
+        tabLayout.addTab(tabLayout.newTab().setText("Mech"));
+        tabLayout.addTab(tabLayout.newTab().setText("Western"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);
+        final PagerAdapter adapter = new PagerAdapter
+                (getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        return view;
+    }
+
+
+}/*
         rideNow = (Button) rootView.findViewById(R.id.rideNow);
 
         rideNow.setOnClickListener(new View.OnClickListener() {
@@ -56,11 +94,5 @@ public class HomePageFragment extends PageMainFragment {
                     startActivity(rIntent);
                 }
             }
-        });
+        });*/
 
-        return rootView;
-    }
-
-
-
-}
