@@ -11,9 +11,12 @@ import java.util.HashMap;
 
 public class Cycle implements Serializable {
 
-    private String Image, model, quantity;
-
-    public Cycle(String Image, String model, String quantity) {
+    private String Image, model;
+    private Long quantity;
+    public Cycle() {
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+    }
+    public Cycle(String Image, String model, Long quantity) {
         this.Image = Image;
         this.quantity = quantity;
         this.model = model;
@@ -43,11 +46,11 @@ public class Cycle implements Serializable {
         this.model = model;
     }
 
-    public String getQuantity() {
+    public Long getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Long quantity) {
         this.quantity = quantity;
     }
 

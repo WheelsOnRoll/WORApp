@@ -49,8 +49,8 @@ public class HomePageFragment extends PageMainFragment {
         final View view= inflater.inflate(R.layout.fragment_home_page, container, false);
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("MegaTower"));
         tabLayout.addTab(tabLayout.newTab().setText("Mech"));
+        tabLayout.addTab(tabLayout.newTab().setText("MegaTower"));
         tabLayout.addTab(tabLayout.newTab().setText("Western"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
