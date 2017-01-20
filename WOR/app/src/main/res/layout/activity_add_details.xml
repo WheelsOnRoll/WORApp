@@ -39,6 +39,7 @@
 
     <Button
         android:id="@+id/add_details_submit"
+        android:text="Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
