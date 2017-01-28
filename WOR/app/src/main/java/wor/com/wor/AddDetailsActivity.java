@@ -1,10 +1,12 @@
 package wor.com.wor;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -30,6 +32,7 @@ public class AddDetailsActivity extends AppCompatActivity {
     private String email;
     private String photoURL;
     private String userName;
+
 
     private DatabaseReference mDatabase;
 
@@ -66,47 +69,71 @@ public class AddDetailsActivity extends AppCompatActivity {
     }
 
     public void addDetails(){
+
+
         final String mobile = mobileNumber.getText().toString();
         final String rollNo = rollNumber.getText().toString();
         final String blockNo = blockNumber.getText().toString();
         final String code = referralCode.getText().toString();
-        // TODO: Check for possible roll number duplicates
-        if(code.length()>0) {
-            mDatabase.child("referrals").addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.hasChild(code)) {
-                        Toast.makeText(AddDetailsActivity.this, "Invalid Referral Code!", Toast.LENGTH_SHORT).show();
-                    } else {
-                        String to = dataSnapshot.child(code).child("to").getValue().toString();
-                        if (to.equals(email)) {
-                            User user = new User(id, userName, email, photoURL, mobile, rollNo, blockNo, REFERRAL_BALANCE);
-                            addUser(user);
-                        } else {
+
+        if(mobile.equals("")||rollNo.equals("")||blockNo.equals("")){
+            Toast.makeText(AddDetailsActivity.this,"Please enter all Details!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+
+            // TODO: Check for possible roll number duplicates
+            if (code.length() > 0) {
+                mDatabase.child("referrals").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (!dataSnapshot.hasChild(code)) {
                             Toast.makeText(AddDetailsActivity.this, "Invalid Referral Code!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            String to = dataSnapshot.child(code).child("to").getValue().toString();
+                            if (to.equals(email)) {
+                                User user = new User(id, userName, email, photoURL, mobile, rollNo, blockNo, REFERRAL_BALANCE);
+                                addUser(user);
+                            } else {
+                                Toast.makeText(AddDetailsActivity.this, "Invalid Referral Code!", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
-                }
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
 
-                }
-            });
-        }else{
-            User user = new User(id, userName, email, photoURL, mobile, rollNo, blockNo, 0);
-            addUser(user);
+                    }
+                });
+            } else {
+                User user = new User(id, userName, email, photoURL, mobile, rollNo, blockNo, 0);
+                addUser(user);
+            }
         }
-
     }
 
     public void addUser(User user){
-        mDatabase.child(id).setValue(user);
+        final User us1 = user;
+        mDatabase.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(!dataSnapshot.hasChild(id)){
+
+                    mDatabase.child("users").child(id).child("email").setValue(us1.getEmail());
+                    mDatabase.child("user-data").child(id).setValue(us1);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         SharedPreferences sharedPreferences = getSharedPreferences("wor", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("userString", user.toString());
         editor.apply();
-        // TODO: Start home
+        Intent intent = new Intent(AddDetailsActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
 }

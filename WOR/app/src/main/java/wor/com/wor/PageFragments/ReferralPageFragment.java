@@ -55,7 +55,7 @@ public class ReferralPageFragment extends PageMainFragment {
         });
         mDatabase = FirebaseDatabase.getInstance().getReference();
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("wor", Context.MODE_PRIVATE);
-        mUser = User.parse(sharedPreferences.getString("userString", ""));
+       // mUser = User.parse(sharedPreferences.getString("userString", ""));
         PD = new ProgressDialog(getActivity());
         PD.setMessage("Please wait...");
         PD.setCancelable(false);

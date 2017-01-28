@@ -46,4 +46,5 @@ public class CycleReportPageFragment extends PageMainFragment {
 
         return view;
     }
+
 }

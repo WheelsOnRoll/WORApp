@@ -2,6 +2,7 @@ package wor.com.wor.PageFragments;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,9 @@ public class PageMainFragment extends Fragment {
     public PageMainFragment() {
         // Required empty public constructor
     }
+
+    public void onClick(View v){};
+
     static class Adapter extends FragmentPagerAdapter {
         private final List<android.support.v4.app.Fragment> mFragments = new ArrayList<>();
         private final List<String> mFragmentTitles = new ArrayList<>();
