@@ -82,6 +82,7 @@ public class MechPitStopFragment extends Fragment {
                     else
                     {
                         Intent rIntent = new Intent(getActivity(), wor.com.wor.rideNow.class);
+
                         startActivity(rIntent);
                     }
                     }

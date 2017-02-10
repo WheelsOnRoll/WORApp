@@ -6,6 +6,8 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -20,10 +22,13 @@ public class rideNow extends Activity implements ZXingScannerView.ResultHandler{
     TextView textView;
     String text;
 
+    private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ridenow_layout);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         scanqrcode();
         /*zXingScannerView = new ZXingScannerView(this);
@@ -45,6 +50,9 @@ public class rideNow extends Activity implements ZXingScannerView.ResultHandler{
         zXingScannerView.stopCamera();
         setContentView(R.layout.ridenow_layout);
         text = result.getText();
+        if(text.equals("CODE")){
+            mDatabase.child("ride").child("ridenow").setValue("ride");
+        }
         textView = (TextView)findViewById(R.id.qrCodeDetail);
         textView.setText(text);
         new CountDownTimer(1000, 1000) {
