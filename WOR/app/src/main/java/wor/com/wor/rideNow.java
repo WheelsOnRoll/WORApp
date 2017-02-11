@@ -58,7 +58,7 @@ public class rideNow extends Activity implements ZXingScannerView.ResultHandler{
         new CountDownTimer(1000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-
+                
             }
 
             public void onFinish() {
