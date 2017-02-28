@@ -10,14 +10,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mech Tab cycles"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NITK PITSTOPS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
 
-    <android.support.v7.widget.RecyclerView
+        <android.support.v7.widget.RecyclerView
         android:id="@+id/mechcycles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

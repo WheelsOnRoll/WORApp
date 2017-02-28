@@ -51,7 +51,7 @@ public class rideNow extends Activity implements ZXingScannerView.ResultHandler{
         setContentView(R.layout.ridenow_layout);
         text = result.getText();
         if(text.equals("CODE")){
-            mDatabase.child("ride").child("ridenow").setValue("ride");
+            mDatabase.child("test").child("anything").setValue("true");
         }
         textView = (TextView)findViewById(R.id.qrCodeDetail);
         textView.setText(text);
