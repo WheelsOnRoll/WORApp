@@ -134,6 +134,7 @@ public class AddDetailsActivity extends AppCompatActivity {
         editor.apply();
         Intent intent = new Intent(AddDetailsActivity.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
