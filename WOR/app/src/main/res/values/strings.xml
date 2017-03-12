@@ -7,16 +7,15 @@
     <string name="q1">What is our vision?</string>
     <string name="q2">How we work currently?</string>
     <string name="q3">What are the different types of bicycles available in your pilot run schemes?</string>
-    <string name="q4">Sample Question 4</string>
-    <string name="q5">Sample Question 5</string>
-    <string name="q6">Sample Question 6</string>
+    <string name="q4">What is the cost of renting a bicycle?</string>
+    <string name="q5">Are there any added benefits to the customer?</string>
+    <string name="q6">Is it possible to terminate the service midway?</string>
 
     <string name="a1">Our vision is to have a fully automated app based bicycle sharing system. This system will streamline the entire process of taking a cycle and later returning it.</string>
-    <string name="a2">At the moment we are in our pilot run phase we have launched 60 cycles into the NITK streets. These cycles are provided to the students on a simple rental system. This phase will give us a better understanding of the maintenance and managements of bicycles.</string>
-    <string name="a3">All the bicycles that we provide are completely brand new and in optimum condition for riding. They have been tested thoroughly for their quality and ride comfort, and we can assure you that they are one of the best.</string>
-    <string name="a4">Sample Answer 4</string>
-    <string name="a5">Sample Answer 5</string>
-    <string name="a6">Sample Answer 6</string>
+    <string name="a2">At For a geared cyclethe rent of the cycle is Rs 2200 and refundable deposit is Rs 3600. For a gearless cycle,the rent of the cycle is Rs 1200 and refundable 
+        deposit is Rs 2200 .</string>
+    <string name="a5">Yes, basic mechanical assistance will be provided to all cycles ,if rented from Wheels On Roll.</string>
+    <string name="a6">Due to the breach of contract ,the customer will not be refunded any part of the rent. The deposit will be given back to the customer after deducing charges for damages to the cycle if any.</string>
 
     <string name="report_rental">CYCLE RENTAL COMPLAINT</string>
     <string name="report_owner">CYCLE OWNER COMPLAINT</string>
