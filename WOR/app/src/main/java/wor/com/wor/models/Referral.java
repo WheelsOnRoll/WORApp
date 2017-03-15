@@ -5,9 +5,6 @@ import com.google.firebase.database.Exclude;
 import java.io.Serializable;
 import java.util.HashMap;
 
-/**
- * Created by hrishi on 4/1/17.
- */
 
 public class Referral implements Serializable {
 

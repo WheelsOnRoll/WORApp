@@ -29,10 +29,6 @@ import wor.com.wor.R;
 import wor.com.wor.models.Cycle;
 import wor.com.wor.viewholders.CycleViewHolder;
 
-/**
- * Created by Santosh on 13-Jan-17.
- */
-
 public class MechPitStopFragment extends Fragment {
     private static final String TAG = "TimeLineFragment";
 

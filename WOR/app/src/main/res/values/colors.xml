@@ -7,5 +7,6 @@
     <color name="accent">#FFFFFF</color>
     <color name="prompt">#FFFFBB33</color>
     <color name="black">#000000</color>
+    <color name="red">#FF00</color>
 
 </resources>

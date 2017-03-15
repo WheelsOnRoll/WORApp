@@ -12,9 +12,6 @@ import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-/**
- * Created by bhavishya on 28-Dec-16.
- */
 
 public class rideNow extends Activity implements ZXingScannerView.ResultHandler{
 

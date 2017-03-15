@@ -5,9 +5,6 @@ import com.google.firebase.database.Exclude;
 import java.io.Serializable;
 import java.util.HashMap;
 
-/**
- * Created by Santosh on 14-Jan-17.
- */
 
 public class Cycle implements Serializable {
 

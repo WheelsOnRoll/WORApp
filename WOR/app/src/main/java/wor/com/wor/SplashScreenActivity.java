@@ -17,7 +17,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen_axtivity);
+        setContentView(R.layout.activity_splash_screen_activity);
         ((ProgressBar)findViewById(R.id.splash_loader)).getIndeterminateDrawable().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
         if (android.os.Build.VERSION.SDK_INT >= 21) {
             Window window = this.getWindow();

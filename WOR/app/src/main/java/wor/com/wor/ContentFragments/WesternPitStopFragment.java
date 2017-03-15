@@ -13,9 +13,6 @@ import com.google.firebase.database.DatabaseReference;
 
 import wor.com.wor.R;
 
-/**
- * Created by Santosh on 13-Jan-17.
- */
 
 public class WesternPitStopFragment extends Fragment {
     private static final String TAG = "TimeLineFragment";
