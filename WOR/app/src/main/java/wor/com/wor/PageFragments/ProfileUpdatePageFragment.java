@@ -18,10 +18,6 @@ import wor.com.wor.models.User;
 
 import static android.content.Context.MODE_PRIVATE;
 
-/**
- * Created by Santosh on 28-Dec-16.
- */
-
 public class ProfileUpdatePageFragment extends PageMainFragment {  public ProfileUpdatePageFragment(){}
 
     private EditText musername, mrollnum, memail, mblocknum, mphonenum;

@@ -7,9 +7,6 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Santosh on 6/14/2016.
- */
 public class PageMainFragment extends Fragment {
 
     public PageMainFragment() {

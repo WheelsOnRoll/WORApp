@@ -26,9 +26,6 @@ import java.util.Map;
 import wor.com.wor.R;
 import wor.com.wor.models.*;
 
-/**
- * Created by Santosh on 28-Dec-16.
- */
 
 public class ReferralPageFragment extends PageMainFragment {
 

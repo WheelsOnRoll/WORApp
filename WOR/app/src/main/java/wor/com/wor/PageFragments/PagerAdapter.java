@@ -1,11 +1,6 @@
 package wor.com.wor.PageFragments;
 
-/**
- * Created by Santosh on 14-Jan-17.
- */
-
-
-        import android.support.v4.app.Fragment;
+import android.support.v4.app.Fragment;
         import android.support.v4.app.FragmentManager;
         import android.support.v4.app.FragmentStatePagerAdapter;
 

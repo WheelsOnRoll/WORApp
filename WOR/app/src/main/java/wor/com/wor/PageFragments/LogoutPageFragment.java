@@ -20,9 +20,6 @@ import wor.com.wor.MainActivity;
 import wor.com.wor.R;
 import wor.com.wor.SignInActivity;
 
-/**
- * Created by Santosh on 28-Dec-16.
- */
 
 public class LogoutPageFragment extends PageMainFragment implements  View.OnClickListener,GoogleApiClient.OnConnectionFailedListener {  public LogoutPageFragment(){}
     Button logoutButton;

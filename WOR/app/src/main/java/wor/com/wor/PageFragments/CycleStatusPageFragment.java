@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 
 import wor.com.wor.R;
 
-/**
- * Created by Santosh on 28-Dec-16.
- */
 
 public class CycleStatusPageFragment extends PageMainFragment {
     public CycleStatusPageFragment() {

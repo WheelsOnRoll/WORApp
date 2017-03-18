@@ -35,9 +35,6 @@ import wor.com.wor.models.Cycle;
 import wor.com.wor.rideNow;
 import wor.com.wor.viewholders.CycleViewHolder;
 
-/**
- * Created by Santosh on 12/8/2016.
- */
 
 public class HomePageFragment extends PageMainFragment {
     private FirebaseAuth mFirebaseAuth;
@@ -51,16 +48,6 @@ public class HomePageFragment extends PageMainFragment {
     public HomePageFragment() {
     }
 
-    /*
-        Button rideNow;
-        @Override
-        public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-            if (ActivityCompat.checkSelfPermission(getContext(), permissions[0]) == PackageManager.PERMISSION_GRANTED) {
-                rideNow.setClickable(true);
-            }
-        }
-    */
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable
             Bundle savedInstanceState) {
