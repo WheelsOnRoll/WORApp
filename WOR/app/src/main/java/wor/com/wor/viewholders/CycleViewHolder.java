@@ -10,10 +10,6 @@ import android.widget.TextView;
 import wor.com.wor.R;
 import wor.com.wor.models.Cycle;
 
-/**
- * Created by Santosh on 14-Jan-17.
- */
-
 public class CycleViewHolder extends RecyclerView.ViewHolder{
 
     public ImageView cycleimage;

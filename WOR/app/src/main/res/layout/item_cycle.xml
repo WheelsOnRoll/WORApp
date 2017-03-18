@@ -12,40 +12,55 @@
         android:orientation="vertical">
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:srcCompat="@color/colorAccent"
-            android:id="@+id/cycleimageView" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <TextView
-                android:id="@+id/cycleName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cycle Name"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/cycleimageView"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:padding="8dp"
+                app:srcCompat="@color/colorAccent" />
 
-            <TextView
-                android:id="@+id/cycleQuantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cycle quantity"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_weight="1"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rideButton"
-                android:text="Ride"
-                android:layout_weight="1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_margin="8dp"
+                    android:id="@+id/cycleName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cycle Name"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:layout_margin="8dp"
+                    android:id="@+id/cycleQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cycle quantity"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/rideButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="Ride Now"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"/>
+
+
     </LinearLayout>
 
 

@@ -8,12 +8,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:src="@mipmap/ic_launcher" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Refer Friend:"
         android:textColor="@color/black"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+        android:fontFamily="sans-serif"
+        android:textSize="32sp"/>
 
     <EditText
         android:id="@+id/refer_email"
@@ -25,6 +33,13 @@
         android:id="@+id/refer_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Refer"/>
+        android:layout_margin="12dp"
+        android:background="@color/colorPrimary"
+        android:drawableTint="@color/accent"
+        android:text="REFER FRIEND"
+        android:textColor="@color/accent"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"/>
+
 
 </LinearLayout>
