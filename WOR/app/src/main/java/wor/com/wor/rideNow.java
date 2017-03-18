@@ -3,6 +3,7 @@ package wor.com.wor;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.SystemClock;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -48,7 +49,8 @@ public class rideNow extends Activity implements ZXingScannerView.ResultHandler{
         setContentView(R.layout.ridenow_layout);
         text = result.getText();
         if(text.equals("CODE")){
-            mDatabase.child("test").child("anything").setValue("true");
+            long time = System.currentTimeMillis();
+            mDatabase.child("test").child("anything"+time).setValue("true");
         }
         textView = (TextView)findViewById(R.id.qrCodeDetail);
         textView.setText(text);
