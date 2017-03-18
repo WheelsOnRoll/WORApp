@@ -59,6 +59,7 @@
             android:id="@+id/sign_in"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:layout_marginTop="24dp"
             android:background="@color/colorPrimary"
             android:text="Sign In"
@@ -74,16 +75,6 @@
             android:layout_marginBottom="24dp"
             android:padding="12dp"
             />
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/sign_in_button"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="24dp"
-            android:padding="12dp"
-            android:background="@color/red"
-            android:text="Sign In with Google+" />
 
         <TextView
             android:id="@+id/link_signup"
